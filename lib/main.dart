@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'screens/home_screen.dart';
 import 'screens/notifications.dart';
 import 'screens/settings.dart';
+import 'screens/bluetooth_screen.dart';
 void main() {
   runApp(MyApp());
 }
@@ -18,6 +19,7 @@ class _MyAppState extends State<MyApp> {
     NotificationsPage(), 
     HomeScreen(),
     SettingsPage(),
+    BluetoothScreen(),
       // this is where you add the other screens
   ];
 
@@ -53,6 +55,12 @@ class _MyAppState extends State<MyApp> {
               icon: Icon(Icons.settings),
               label: 'Settings',
             ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.bluetooth),
+              label: 'Bluetooth',
+            ),
+
+
             // Add other navigation bar items here
           ],
           currentIndex: _selectedIndex,
